@@ -43,6 +43,7 @@ jobs:
         # or you can signup for free at https://snyk.io/login
         SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
       with:
+        command: monitor
         image: aries-cloudagent
         args: --file=docker/Dockerfile
 
