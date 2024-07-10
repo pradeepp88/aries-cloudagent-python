@@ -1,3 +1,4 @@
 
 mkdocs-material==9.5.27
 mike==2.0.0
+zipp>=3.19.1 # not directly required, pinned by Snyk to avoid a vulnerability
