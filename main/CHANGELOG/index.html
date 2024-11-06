@@ -12,19 +12,19 @@
         <link rel="prev" href="..">
       
       
-        <link rel="next" href="../features/DevReadMe/">
+        <link rel="next" href="../LTS-Strategy/">
       
       
-      <link rel="icon" href="https://raw.githubusercontent.com/hyperledger/aries-cloudagent-python/main/docs/assets/aries-favicon.png">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.27">
+      <link rel="icon" href="https://raw.githubusercontent.com/hyperledger/aries-rfcs/main/collateral/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.43">
     
     
       
-        <title>Release Notes - Hyperledger Aries ACA-Py Docs</title>
+        <title>Release Notes - ACA-Py Docs</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.6543a935.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.0253249f.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
@@ -46,7 +46,7 @@
       
     
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -92,20 +92,20 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="Hyperledger Aries ACA-Py Docs" class="md-header__button md-logo" aria-label="Hyperledger Aries ACA-Py Docs" data-md-component="logo">
+    <a href=".." title="ACA-Py Docs" class="md-header__button md-logo" aria-label="ACA-Py Docs" data-md-component="logo">
       
-  <img src="https://raw.githubusercontent.com/hyperledger/aries-acapy-docs/main/assets/Hyperledger_Aries_Logo_White.png" alt="logo">
+  <img src="https://raw.githubusercontent.com/hyperledger/aries-rfcs/main/collateral/Hyperledger_Aries_Logo_White.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Hyperledger Aries ACA-Py Docs
+            ACA-Py Docs
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -127,7 +127,7 @@
     <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
     
       <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
       </label>
     
   
@@ -137,7 +137,7 @@
     <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
     
       <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
       </label>
     
   
@@ -145,13 +145,13 @@
       
     
     
-      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
     
       <label class="md-header__button md-icon" for="__search">
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
       </label>
       <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
@@ -160,15 +160,15 @@
       <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
       </label>
       <nav class="md-search__options" aria-label="Search">
         
         <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
           
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
         </button>
       </nav>
       
@@ -188,13 +188,13 @@
     
     
       <div class="md-header__source">
-        <a href="https://github.com/hyperledger/aries-cloudagent-python" title="Go to repository" class="md-source" data-md-component="source">
+        <a href="https://github.com/openwallet-foundation/acapy" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
   </div>
   <div class="md-source__repository">
-    hyperledger/aries-cloudagent-python
+    openwallet-foundation/acapy
   </div>
 </a>
       </div>
@@ -252,7 +252,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../demo/Aries-Workshop/" class="md-tabs__link">
+        <a href="../demo/ACA-Py-Workshop/" class="md-tabs__link">
           
   
   Demos
@@ -363,22 +363,22 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Hyperledger Aries ACA-Py Docs" class="md-nav__button md-logo" aria-label="Hyperledger Aries ACA-Py Docs" data-md-component="logo">
+    <a href=".." title="ACA-Py Docs" class="md-nav__button md-logo" aria-label="ACA-Py Docs" data-md-component="logo">
       
-  <img src="https://raw.githubusercontent.com/hyperledger/aries-acapy-docs/main/assets/Hyperledger_Aries_Logo_White.png" alt="logo">
+  <img src="https://raw.githubusercontent.com/hyperledger/aries-rfcs/main/collateral/Hyperledger_Aries_Logo_White.png" alt="logo">
 
     </a>
-    Hyperledger Aries ACA-Py Docs
+    ACA-Py Docs
   </label>
   
     <div class="md-nav__source">
-      <a href="https://github.com/hyperledger/aries-cloudagent-python" title="Go to repository" class="md-source" data-md-component="source">
+      <a href="https://github.com/openwallet-foundation/acapy" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
   </div>
   <div class="md-source__repository">
-    hyperledger/aries-cloudagent-python
+    openwallet-foundation/acapy
   </div>
 </a>
     </div>
@@ -523,6 +523,147 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#110" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1.0
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.1.0">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#october-15-2024" class="md-nav__link">
+    <span class="md-ellipsis">
+      October 15, 2024
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#110-deprecation-notices" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1.0 Deprecation Notices
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#110-breaking-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1.0 Breaking Changes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#101" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.0.1
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.0.1">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#october-8-2024" class="md-nav__link">
+    <span class="md-ellipsis">
+      October 8, 2024
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#101-breaking-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.0.1 Breaking Changes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#100" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.0.0
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.0.0">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#august-16-2024" class="md-nav__link">
+    <span class="md-ellipsis">
+      August 16, 2024
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#100-breaking-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.0.0 Breaking Changes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0122" class="md-nav__link">
+    <span class="md-ellipsis">
+      0.12.2
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="0.12.2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#august-2-2024" class="md-nav__link">
+    <span class="md-ellipsis">
+      August 2, 2024
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0122-breaking-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      0.12.2 Breaking Changes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#0121" class="md-nav__link">
     <span class="md-ellipsis">
       0.12.1
@@ -589,6 +730,105 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#0113" class="md-nav__link">
+    <span class="md-ellipsis">
+      0.11.3
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="0.11.3">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#august-2-2024_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      August 2, 2024
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0113-breaking-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      0.11.3 Breaking Changes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0112" class="md-nav__link">
+    <span class="md-ellipsis">
+      0.11.2
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="0.11.2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#july-25-2024" class="md-nav__link">
+    <span class="md-ellipsis">
+      July 25, 2024
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0112-breaking-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      0.11.2 Breaking Changes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0111" class="md-nav__link">
+    <span class="md-ellipsis">
+      0.11.1
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="0.11.1">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#may-7-2024" class="md-nav__link">
+    <span class="md-ellipsis">
+      May 7, 2024
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0111-breaking-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      0.11.1 Breaking Changes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#0110" class="md-nav__link">
     <span class="md-ellipsis">
       0.11.0
@@ -625,6 +865,27 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LTS-Strategy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ACA-Py Long Term Support (LTS) Policy
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -1109,11 +1370,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../demo/Aries-Workshop/" class="md-nav__link">
+      <a href="../demo/ACA-Py-Workshop/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Hyperledger Aries / AnonCreds Workshop
+    ACA-Py / AnonCreds Workshop
   </span>
   
 
@@ -1151,7 +1412,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../demo/AriesOpenAPIDemo/" class="md-nav__link">
+      <a href="../demo/OpenAPIDemo/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1256,11 +1517,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../demo/AriesPostmanDemo/" class="md-nav__link">
+      <a href="../demo/PostmanDemo/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Aries Using Postman Demo
+    ACA-Py Using Postman Demo
   </span>
   
 
@@ -1349,7 +1610,7 @@
         
   
   <span class="md-ellipsis">
-    Becoming an Indy/Aries Developer
+    Becoming an ACA-Py Developer
   </span>
   
 
@@ -1387,11 +1648,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../gettingStarted/AriesBasics/" class="md-nav__link">
+      <a href="../gettingStarted/ACA-PyBasics/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Hyperledger Aries Basics
+    ACA-Py Basics
   </span>
   
 
@@ -1429,11 +1690,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../gettingStarted/AriesBigPicture/" class="md-nav__link">
+      <a href="../gettingStarted/ACA-PyBigPicture/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Aries - The Big Picture
+    ACA-Py - The Big Picture
   </span>
   
 
@@ -1450,11 +1711,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../gettingStarted/AriesAgentArchitecture/" class="md-nav__link">
+      <a href="../gettingStarted/ACA-PyAgentArchitecture/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Aries Architecture
+    ACA-Py Architecture
   </span>
   
 
@@ -1471,11 +1732,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../gettingStarted/AriesMessaging/" class="md-nav__link">
+      <a href="../gettingStarted/DIDCommMessaging/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Aries Messaging
+    ACA-Py Messaging
   </span>
   
 
@@ -1492,11 +1753,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../gettingStarted/AriesDeveloperDemos/" class="md-nav__link">
+      <a href="../gettingStarted/ACA-PyDeveloperDemos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Aries Developer Demos
+    ACA-Py Developer Demos
   </span>
   
 
@@ -1576,7 +1837,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../gettingStarted/YourOwnAriesAgent/" class="md-nav__link">
+      <a href="../gettingStarted/YourOwnACA-PyAgent/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1597,11 +1858,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../gettingStarted/IndyAriesDevOptions/" class="md-nav__link">
+      <a href="../gettingStarted/IndyACA-PyDevOptions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Aries Developer Options
+    ACA-Py Developer Options
   </span>
   
 
@@ -1660,7 +1921,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../gettingStarted/AriesRoutingExample/" class="md-nav__link">
+      <a href="../gettingStarted/DIDCommRoutingExample/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1812,11 +2073,53 @@
   
   
     <li class="md-nav__item">
+      <a href="../deploying/BBSSignatures/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Enabling BBS Signatures support
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../deploying/IndySDKtoAskarMigration/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     Indy SDK to Askar Migration
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../deploying/AnoncredsControllerMigration/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Controller Migration to use AnonCreds Rust
   </span>
   
 
@@ -2006,6 +2309,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../testing/IntegrationTests/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Integration Tests
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../testing/Logging/" class="md-nav__link">
         
   
@@ -2027,11 +2351,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../testing/INTEGRATION-TESTS/" class="md-nav__link">
+      <a href="../testing/BDDTests/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    ACA-Py Integration Tests
+    ACA-Py Integration BDD Tests
   </span>
   
 
@@ -2183,7 +2507,7 @@
         
   
   <span class="md-ellipsis">
-    Hyperledger Code of Conduct
+    Code of Conduct
   </span>
   
 
@@ -2226,6 +2550,27 @@
   
   <span class="md-ellipsis">
     Publishing an ACA-Py Release
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Managing-ACA-Py-Doc-Site/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Managing the ACA-Py Documentation Site
   </span>
   
 
@@ -2288,6 +2633,147 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#110" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1.0
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.1.0">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#october-15-2024" class="md-nav__link">
+    <span class="md-ellipsis">
+      October 15, 2024
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#110-deprecation-notices" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1.0 Deprecation Notices
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#110-breaking-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1.0 Breaking Changes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#101" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.0.1
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.0.1">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#october-8-2024" class="md-nav__link">
+    <span class="md-ellipsis">
+      October 8, 2024
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#101-breaking-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.0.1 Breaking Changes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#100" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.0.0
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.0.0">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#august-16-2024" class="md-nav__link">
+    <span class="md-ellipsis">
+      August 16, 2024
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#100-breaking-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.0.0 Breaking Changes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0122" class="md-nav__link">
+    <span class="md-ellipsis">
+      0.12.2
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="0.12.2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#august-2-2024" class="md-nav__link">
+    <span class="md-ellipsis">
+      August 2, 2024
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0122-breaking-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      0.12.2 Breaking Changes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#0121" class="md-nav__link">
@@ -2356,6 +2842,105 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#0113" class="md-nav__link">
+    <span class="md-ellipsis">
+      0.11.3
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="0.11.3">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#august-2-2024_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      August 2, 2024
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0113-breaking-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      0.11.3 Breaking Changes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0112" class="md-nav__link">
+    <span class="md-ellipsis">
+      0.11.2
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="0.11.2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#july-25-2024" class="md-nav__link">
+    <span class="md-ellipsis">
+      July 25, 2024
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0112-breaking-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      0.11.2 Breaking Changes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0111" class="md-nav__link">
+    <span class="md-ellipsis">
+      0.11.1
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="0.11.1">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#may-7-2024" class="md-nav__link">
+    <span class="md-ellipsis">
+      May 7, 2024
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0111-breaking-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      0.11.1 Breaking Changes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#0110" class="md-nav__link">
     <span class="md-ellipsis">
       0.11.0
@@ -2407,6 +2992,396 @@
 
 
 <h1 id="aries-cloud-agent-python-changelog">Aries Cloud Agent Python Changelog<a class="headerlink" href="#aries-cloud-agent-python-changelog" title="Permanent link">&para;</a></h1>
+<h2 id="110">1.1.0<a class="headerlink" href="#110" title="Permanent link">&para;</a></h2>
+<h3 id="october-15-2024">October 15, 2024<a class="headerlink" href="#october-15-2024" title="Permanent link">&para;</a></h3>
+<p>Release 1.1.0 is the first release of ACA-Py from the <a href="https://openwallet.foundation/">OpenWallet Foundation</a> (OWF). The only reason for the release is to test out all of the release publishing actions now that we have moved the repo to its new home (<a href="https://github.com/openwallet-foundation/acapy">https://github.com/openwallet-foundation/acapy</a>). Almost all of the changes in the release are related to the move.</p>
+<p>The move triggered some big changes for those with existing ACA-Py deployments resulting from the change in the GitHub organization (from Hyperledger to OWF) and source code name (from <code>aries_cloudagent</code> to <code>acapy_agent</code>). See the <a href="#110rc0-breaking-changes">Release 1.1.0 breaking changes</a> for the details.</p>
+<p>For up to date details on what the repo move means for ACA-Py users, including steps for updating deployments, please follow the updates in <a href="https://github.com/hyperledger/aries-cloudagent-python/issues/3250">GitHub Issue #3250</a>. We'll keep you informed about the approach, timeline, and progress of the move. Stay tuned!</p>
+<h3 id="110-deprecation-notices">1.1.0 Deprecation Notices<a class="headerlink" href="#110-deprecation-notices" title="Permanent link">&para;</a></h3>
+<p>The same <strong><a href="#101-deprecation-notices">deprecation notices</a></strong> from the <a href="#101">1.0.1</a> release about AIP 1.0 protocols still apply. The protocols remain in the 1.1.0 release, but will be moved out of the core and into plugins soon. Please review these notifications carefully!</p>
+<h3 id="110-breaking-changes">1.1.0 Breaking Changes<a class="headerlink" href="#110-breaking-changes" title="Permanent link">&para;</a></h3>
+<p>The only (but significant) breaking changes in 1.1.0 are related to the GitHub organization and project name changes. Specific impacts are:</p>
+<ul>
+<li>the renaming of the source code folder from <code>aries_cloudagent</code> to <code>acapy_agent</code>,</li>
+<li>the publication of the <a href="https://pypi.org">PyPi</a> project under the new <code>acapy_agent</code> name, and</li>
+<li>the use of the OWF organizational GitHub Container Registry (<a href="https://ghcr.io">GHCR</a>) and <code>acapy_agent</code> as the name for release container image artifacts.<ul>
+<li>The patterns for the image tags remain the same as before. So, for example, the new nightly artifact can be found here: <a href="docker pull ghcr.io/openwallet-foundation/acapy-agent:py3.12-nightly">docker pull ghcr.io/openwallet-foundation/acapy-agent:py3.12-nightly</a>.</li>
+</ul>
+</li>
+</ul>
+<p>Anyone deploying ACA-Py should use this release to update their existing deployments. Since there are no other changes to ACA-Py, any issues found should relate back to those changes.</p>
+<ul>
+<li>Deployments referencing the <a href="https://pypi.org">PyPi</a> project (including those in custom plugins) <strong>MUST</strong> update their deployments to use the new name.</li>
+<li>Deployments sourcing the ACA-Py published container image artifacts to <a href="https://ghcr.io">GHCR</a> must update their deployments to use the new URLs.</li>
+</ul>
+<p>Please note that if and when the current LTS releases (0.11 and 0.12) have new releases, they will continue to use the <code>aries_cloudagent</code> source folder, the existing locations for the <a href="https://pypi.org">PyPi</a> and <a href="https://ghcr.io">GHCR</a> container image artifacts.</p>
+<h4 id="110-categorized-list-of-pull-requests">1.1.0 Categorized List of Pull Requests<a class="headerlink" href="#110-categorized-list-of-pull-requests" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Updates related to the move and rename of the repository from the Hyperledger to <a href="https://openwallet.foundation/">OpenWallet Foundation</a> GitHub organization</p>
+<ul>
+<li>Change pypi upload workflow to use pypa/gh-action-pypi-publish <a href="https://github.com/openwallet-foundation/acapy/pull/3291">#3291</a> <a href="https://github.com/jamshale">jamshale</a></li>
+<li>Update interop fork location after AATH update <a href="https://github.com/openwallet-foundation/acapy/pull/3282">#3282</a> <a href="https://github.com/jamshale">jamshale</a></li>
+<li>Fix interop test fork location replacement <a href="https://github.com/openwallet-foundation/acapy/pull/3280">#3280</a> <a href="https://github.com/jamshale">jamshale</a></li>
+<li>Update MDs and release publishing files to reflect the repo move to OWF <a href="https://github.com/openwallet-foundation/acapy/pull/3270">#3270</a> <a href="https://github.com/swcurran">swcurran</a></li>
+<li>General repo updates post OWF move. <a href="https://github.com/openwallet-foundation/acapy/pull/3267">#3267</a> <a href="https://github.com/jamshale">jamshale</a></li>
+</ul>
+</li>
+<li>
+<p>Release management pull requests:</p>
+<ul>
+<li>1.1.0 <a href="https://github.com/openwallet-foundation/acapy/pull/3292">#3294</a> <a href="https://github.com/swcurran">swcurran</a></li>
+<li>1.1.0rc1 <a href="https://github.com/openwallet-foundation/acapy/pull/3292">#3292</a> <a href="https://github.com/swcurran">swcurran</a></li>
+<li>1.1.0rc0 <a href="https://github.com/openwallet-foundation/acapy/pull/3284">#3284</a> <a href="https://github.com/swcurran">swcurran</a></li>
+</ul>
+</li>
+<li>
+<p>Dependabot PRs</p>
+<ul>
+<li><a href="https://github.com/openwallet-foundation/acapy/pulls?q=is%3Apr+is%3Amerged+merged%3A2024-10-08..2024-10-15+author%3Aapp%2Fdependabot+">Link to list of Dependabot PRs in this release</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="101">1.0.1<a class="headerlink" href="#101" title="Permanent link">&para;</a></h2>
+<h3 id="october-8-2024">October 8, 2024<a class="headerlink" href="#october-8-2024" title="Permanent link">&para;</a></h3>
+<p>Release 1.0.1 will be the last release of ACA-Py from the Hyperledger organization before the repository moves to the <a href="https://openwallet.foundation/">OpenWallet Foundation</a> (OWF). Soon after this release, the ACA-Py project and this repository will move to the OWF's GitHub organization as the <a href="https://github.com/openwallet-foundation/project-proposals/blob/main/projects/aca-py.md">new "acapy" project</a>.</p>
+<p>For details on what this means for ACA-Py users, including steps for updating deployments, please follow the updates in <a href="https://github.com/hyperledger/aries-cloudagent-python/issues/3250">GitHub Issue #3250</a>. We'll keep you informed about the approach, timeline, and progress of the move. Stay tuned!</p>
+<p>The 1.0.1 release contains mostly internal clean ups, technical debt elimination, and a revision to the integration testing approach, incorporating the <a href="https://github.com/hyperledger/aries-agent-test-harness">Aries Agent Test Harness</a> tests in the ACA-Py continuous integration testing process. There are substantial enhancements in the management of keys and their use with <a href="https://www.w3.org/TR/vc-data-integrity/">VC-DI</a> proofs, and web-based DID methods like <code>did:web</code>. See the <code>Wallet and Key Handling</code> updates in the categorized PR list below.</p>
+<p>There are several important <strong><a href="#101-deprecation-notices">deprecation notices</a></strong> in this release in preparation for the next ACA-Py release. Please review these notifications carefully!</p>
+<p>In an attempt to shorten the categorized list of PRs in the release, rather than listing all of the <code>dependabot</code> PRs in the release, we've included a link to a list of those PRs.</p>
+<h4 id="101-deprecation-notices">1.0.1 Deprecation Notices<a class="headerlink" href="#101-deprecation-notices" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>ACA-Py will soon be moved from the Hyperledger GitHub organization to that of the <a href="https://openwallet.foundation/">OpenWallet Foundation</a>. As such, there will be changes in the names and locations of the artifacts produced -- the <a href="https://pypi.org">PyPi</a> project and the container images in the <a href="https://ghcr.io">GitHub Container Registry</a>. We will retain the ability to publish LTS releases of ACA-Py for the current LTS versions (0.11, 0.12) in the current locations. For details, guidance, timing, and progress on the move, please monitor the description of <a href="https://github.com/hyperledger/aries-cloudagent-python/issues/3250">GitHub Issue #3250</a> that will be maintained throughout the process.</p>
+</li>
+<li>
+<p>In the next ACA-Py release, we will be dropping from the core ACA-Py repository the AIP 1.0 <a href="https://hyperledger.github.io/aries-rfcs/latest/features/0160-connection-protocol/">RFC 0160 Connections</a>, [RFC 0037 Issue Credentials v1.0] and [RFC 0037 Present Proof v1.0] DIDComm protocols. Each of the protocols will be moved to the [ACA-Py Plugins] repo. All deployers that use those protocols <strong>SHOULD</strong> update to the <a href="https://hyperledger.github.io/aries-rfcs/latest/aip2/0003-protocols/">AIP 2.0</a> versions of those protocols (<a href="https://hyperledger.github.io/aries-rfcs/latest/aip2/0434-outofband/">RFC 0434 Out of Band</a>+<a href="https://hyperledger.github.io/aries-rfcs/latest/aip2/0023-did-exchange/">RFC 0023 DID Exchange</a>, <a href="https://hyperledger.github.io/aries-rfcs/latest/aip2/0453-issue-credential-v2/">RFC 0453 Issue Credential v2.0</a> and <a href="https://hyperledger.github.io/aries-rfcs/latest/aip2/0454-present-proof-v2/">RFC 0454 Present Proof v2.0</a>, respectively). Once the protocols are removed from ACA-Py, anyone still using those protocols <strong>MUST</strong> adjust their configuration to load those protocols from the respective plugins.</p>
+</li>
+</ul>
+<h3 id="101-breaking-changes">1.0.1 Breaking Changes<a class="headerlink" href="#101-breaking-changes" title="Permanent link">&para;</a></h3>
+<p>There are no breaking changes in ACA-Py Release 1.0.1.</p>
+<h4 id="101-categorized-list-of-pull-requests">1.0.1 Categorized List of Pull Requests<a class="headerlink" href="#101-categorized-list-of-pull-requests" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Wallet and Key Handling Updates</p>
+<ul>
+<li>Data integrity routes <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3261">#3261</a> <a href="https://github.com/PatStLouis">PatStLouis</a></li>
+<li>[BUG] Handle get key operation when no tag has been set <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3256">#3256</a> <a href="https://github.com/PatStLouis">PatStLouis</a></li>
+<li>Feature multikey management <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3246">#3246</a> <a href="https://github.com/PatStLouis">PatStLouis</a></li>
+<li>chore: delete unused keypair storage manager <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3245">#3245</a> <a href="https://github.com/dbluhm">dbluhm</a></li>
+</ul>
+</li>
+<li>
+<p>Credential Exchange Updates</p>
+<ul>
+<li>feat: verify creds signed with Ed25519VerificationKey2020 <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3244">#3244</a> <a href="https://github.com/dbluhm">dbluhm</a></li>
+<li>Add anoncreds profile basic scenario test <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3232">#3232</a> <a href="https://github.com/jamshale">jamshale</a></li>
+<li>fix: anoncreds revocation notification when revoking <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3226">#3226</a> <a href="https://github.com/thiagoromanos">thiagoromanos</a></li>
+</ul>
+</li>
+<li>
+<p>OpenAPI Updates</p>
+<ul>
+<li><img alt="🎨" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f3a8.svg" title=":art:" /> fix type hints for optional method parameters <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3234">#3234</a> <a href="https://github.com/ff137">ff137</a></li>
+</ul>
+</li>
+<li>
+<p>Documentation and GHA Test Updates</p>
+<ul>
+<li>Prevent integration tests on forks <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3276">#3276</a> <a href="https://github.com/jamshale">jamshale</a></li>
+<li>:memo Fix typos in PUBLISHING.md <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3274">#3274</a> <a href="https://github.com/claudiotorrens">claudiotorrens</a></li>
+<li>Fix scenario tests <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3231">#3231</a> <a href="https://github.com/jamshale">jamshale</a></li>
+<li>Only run integration tests on correct file changes <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3230">#3230</a> <a href="https://github.com/jamshale">jamshale</a></li>
+<li>Update docs for outstanding anoncreds work <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3229">#3229</a> <a href="https://github.com/jamshale">jamshale</a></li>
+<li>Only change interop testing fork on pull requests <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3218">#3218</a> <a href="https://github.com/jamshale">jamshale</a></li>
+<li>Remove the RC from the versions table <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3213">#3213</a> <a href="https://github.com/swcurran">swcurran</a></li>
+<li>Document the documentation site generation process <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3212">#3212</a> <a href="https://github.com/swcurran">swcurran</a></li>
+<li>Remove 1.0.0rc6 documentation from gh-pages <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3211">#3211</a> <a href="https://github.com/swcurran">swcurran</a>  - Adjust nightly and release workflows <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3210">#3210</a> <a href="https://github.com/jamshale">jamshale</a></li>
+<li>Change interop tests to critical on PRs <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3209">#3209</a> <a href="https://github.com/jamshale">jamshale</a></li>
+<li>Change integration testing <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3194">#3194</a> <a href="https://github.com/jamshale">jamshale</a></li>
+</ul>
+</li>
+<li>
+<p>Dependencies and Internal Fixes/Updates:</p>
+<ul>
+<li>Adjust sonarcloud and integration test workflows <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3259">#3259</a> <a href="https://github.com/jamshale">jamshale</a></li>
+<li>fix: enable refreshing did endpoint using mediator info <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3260">#3260</a> <a href="https://github.com/dbluhm">dbluhm</a></li>
+<li>Removing padding from url invitations <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3238">#3238</a> <a href="https://github.com/jamshale">jamshale</a></li>
+<li>Ensure that DAP_PORT is always an int <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3241">#3241</a> <a href="https://github.com/Gavinok">Gavinok</a></li>
+<li>Fix logic to send verbose webhooks <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3193">#3193</a> <a href="https://github.com/ianco">ianco</a></li>
+<li>fixes <a class="magiclink magiclink-github magiclink-issue" href="https://github.com/squidfunk/mkdocs-material/issues/3186" title="GitHub Issue: squidfunk/mkdocs-material #3186">#3186</a>: handler_timed_file_handler <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3187">#3187</a> <a href="https://github.com/rngadam">rngadam</a></li>
+<li>issue <a class="magiclink magiclink-github magiclink-issue" href="https://github.com/squidfunk/mkdocs-material/issues/3182" title="GitHub Issue: squidfunk/mkdocs-material #3182">#3182</a>: replace deprecated ptvsd debugger by debugpy <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3183">#3183</a> <a href="https://github.com/rngadam">rngadam</a></li>
+<li>👷Publish <code>aries-cloudagent-bbs</code>  Docker image <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3175">#3175</a> <a href="https://github.com/rblaine95">rblaine95</a></li>
+<li>[ POST v1.0.0 ] Adjust message queue error handling <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3170">#3170</a> <a href="https://github.com/jamshale">jamshale</a></li>
+</ul>
+</li>
+<li>
+<p>Release management pull requests:</p>
+<ul>
+<li>1.0.1 <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3278">#3278</a> <a href="https://github.com/swcurran">swcurran</a></li>
+<li>1.0.1rc1 <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3268">#3268</a> <a href="https://github.com/swcurran">swcurran</a></li>
+<li>1.0.1rc0 <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3254">#3254</a> <a href="https://github.com/swcurran">swcurran</a></li>
+</ul>
+</li>
+<li>
+<p>Dependabot PRs</p>
+<ul>
+<li><a href="https://github.com/hyperledger/aries-cloudagent-python/pulls?q=is%3Apr+is%3Amerged+merged%3A2024-08-15..2024-10-08+author%3Aapp%2Fdependabot+">Link to list of Dependabot PRs in this release</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="100">1.0.0<a class="headerlink" href="#100" title="Permanent link">&para;</a></h2>
+<h3 id="august-16-2024">August 16, 2024<a class="headerlink" href="#august-16-2024" title="Permanent link">&para;</a></h3>
+<p>Release 1.0.0 is finally here! While Aries Cloud Agent Python has been used in production for several years, the maintainers have decided it is finally time to put a "1.0" tag on the project. The 1.0.0 release itself includes well over 100 PRs merged since <a href="#0121">Release 0.12.1</a>. The vast majority of that work was in hardening the product in preparation for this 1.0.0 release. While there are a number of new features and a new Long Term Support (LTS) policy, the majority of the focus has been on eliminating technical debt and improving the underlying implementation. The full list of PRs in this release can be <a href="#100-categorized-list-of-pull-requests">found below</a>. here are the highlights of the release:</p>
+<ul>
+<li>A formal ACA-Py Long Term Support (LTS) policy has been documented and is being followed.</li>
+<li>The default underlying Python version has been upgraded to 3.12. Happily, there were minimal code changes to enable the upgrade to 3.12 from the previous Python 3.9.</li>
+<li>A new ACA-Py Plugins Store at <a href="https://plugins.aca-py.org">https://plugins.aca-py.org</a>. Check out the plugins that have been published by ACA-Py contributors, and learn how to add your own plugins!</li>
+<li>We've improved the developer experience by enabling support in ACA-Py artifacts for the ARM Architecture (and notably, Mac M1 and later systems). To do so, we have removed <em>default</em> support for BBS Signatures. BBS Signatures are still supported in the codebase, and guidance is provided for how to enable the support in artifacts (Docker images, etc.) for those needing it. We look forward to updating the BBS support in ACA-Py based on libraries that include multi-architecture support.</li>
+<li>Pagination support has been added to a number of Admin API queries for object lists, enabling the development of better user interfaces for large deployments.</li>
+<li>Cleanup in the ACA-Py AnonCreds Revocation Registry handling to prevent errors that were found occurring under certain specific conditions.</li>
+<li>Upgraded pull request and release pipeline, including:<ul>
+<li>Enabling a much more aggressive approach to dependabot notifications, beyond just those for security vulnerabilities. Along with those upgrades, we've moved to newer/better build pipeline tooling, such as switching from Black to Ruff, and re-enable per pull request code coverage notifications.</li>
+<li>Many of the PRs in this release are related to dependency updates from dependabot or applied directly.</li>
+<li>A switch to more used tooling, such as a switch from black to ruff.</li>
+<li>Improvements in coverage monitoring of pull requests.</li>
+</ul>
+</li>
+<li>The start of a <a href="https://identity.foundation/didcomm-messaging/spec/">DIDComm v2</a> implementation in ACA-Py. The work is not complete, as we are taking an incremental approach to adding DIDComm v2 support.</li>
+<li>A decorator has been added for enabling direct support for Admin API authentication. Previously, the only option to enable (the necessary) Admin API was to put the API behind a proxy that could manage authentication. With this update, ACA-Py deployments can handle authentication directly, without a proxy.</li>
+<li>We have dropped support for the old, archived <a href="https://github.com/hyperledger/indy-sdk">Indy SDK</a>. If you have not migrated your deployment off of the Indy SDK, you must do so now. See this <a href="#https://aca-py.org/latest/deploying/IndySDKtoAskarMigration/">Indy SDK to Askar migration documentation</a> for guidance.</li>
+<li>Support added for using AnonCreds in <a href="https://www.w3.org/TR/vc-data-model-1.1/">W3C VCDM</a> format.</li>
+</ul>
+<h3 id="100-breaking-changes">1.0.0 Breaking Changes<a class="headerlink" href="#100-breaking-changes" title="Permanent link">&para;</a></h3>
+<p>With the focus of the pull requests for this release on stabilizing the implementation, there were a few breaking changes:</p>
+<ul>
+<li>The default underlying Python version has been upgraded to 3.12.</li>
+<li>ACA-Py has supported BBS Signatures for some time. However, the dependency that is used (<code>bbs</code>) does not support the ARM architecture, and its inclusion in the default ACA-Py artifacts mean that developers using ARM-based hardware (such as Apple M1 Macs or later) cannot run ACA-Py "out-of-the-box". We feel that providing a better developer experience by supporting the ARM architecture is more important than BBS Signature support at this time. As such, we have removed the BBS dependency from the base ACA-Py artifacts and made it an add-on that those using ACA-Py with BBS must take extra steps to build into their own artifacts, as documented <a href="https://aca-py.org/latest/deploying/BBSSignatures/">here</a>.</li>
+<li>Support for the Indy SDK has been dropped. It had been previously deprecated. See this <a href="https://aca-py.org/latest/deploying/IndySDKtoAskarMigration/">Indy SDK to Askar migration documentation</a> for guidance. <a href="https://www.hyperledger.org/projects/hyperledger-indy">Hyperledger Indy</a> is still fully supported - it's just the Indy SDK client-side library that has been removed.</li>
+<li>The webhook sent after receipt of presentation by a verifier has been updated to include all of the information needed by the verifier so that the controller does not have to call the "Verify Presentation" endpoint. The issue with calling that endpoint after the presentation has been received is that there is a race condition between the controller and the ACA-Py cleanup process deleting completed Present Proof protocol instances. See <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3081">#3081</a> for additional details.</li>
+<li>A fix to an obscure bug includes a change to the data sent to the controller after publishing multiple, endorsed credential definition revocation registries in a single call. The bug fix was to properly process the publishing. The breaking change is that when the process (now successfully) completes, the controller is sent the list of published credential definitions. Previously only a single value was being sent. See PR <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3107">#3107</a> for additional details.</li>
+<li>The configuration settings around whether a multitenant wallet uses a single database vs. a database per tenant has been made more explicit. The previous settings were not clear, resulting in some deployments that were intended to be a database per tenant actually result in all tenants being in the same database. For details about the change, see <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3105">#3105</a>.</li>
+</ul>
+<h4 id="100-categorized-list-of-pull-requests">1.0.0 Categorized List of Pull Requests<a class="headerlink" href="#100-categorized-list-of-pull-requests" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>LTS Support Policy:</p>
+<ul>
+<li>LTS Strategy and Scanner GHA <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3143">#3143</a> <a href="https://github.com/swcurran">swcurran</a></li>
+</ul>
+</li>
+<li>
+<p>DIDComm and Connection Establishment updates/fixes:</p>
+<ul>
+<li>fix: multiuse invites with did peer 4 <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3112">#3112</a> <a href="https://github.com/dbluhm">dbluhm</a></li>
+<li>Check connection is ready in all connection required handlers <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3095">#3095</a> <a href="https://github.com/jamshale">jamshale</a></li>
+<li>fix: didexchange manager not checking the did-rotate content correctly <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3057">#3057</a> <a href="https://github.com/gmulhearn-anonyome">gmulhearn-anonyome</a></li>
+<li>fix: respond to did:peer:1 with did:peer:4 <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3050">#3050</a> <a href="https://github.com/dbluhm">dbluhm</a></li>
+<li>DIDComm V2 Initial Implementation <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/2959">#2959</a> <a href="https://github.com/TheTechmage">TheTechmage</a></li>
+<li>Feature: use decorators for admin api authentication <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/2860">#2860</a> <a href="https://github.com/esune">esune</a></li>
+</ul>
+</li>
+<li>
+<p>Admin API, Startup, OpenAPI/Swagger Updates and Improvements:</p>
+<ul>
+<li>Add rekey feature with blank key support <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3125">#3125</a> <a href="https://github.com/jamshale">jamshale</a></li>
+<li>BREAKING: Make single wallet config more explicit <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3105">#3105</a> <a href="https://github.com/jamshale">jamshale</a></li>
+<li>🐛 fix IndyAttrValue bad reference in OpenAPI spec <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3090">#3090</a> <a href="https://github.com/ff137">ff137</a></li>
+<li>🎨 improve record querying logic <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3083">#3083</a> <a href="https://github.com/ff137">ff137</a></li>
+<li>🐛 fix storage record pagination with post-filter query params <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3082">#3082</a> <a href="https://github.com/ff137">ff137</a></li>
+<li>✨ Add pagination support for listing Connection, Cred Ex, and Pres Ex records <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3033">#3033</a> <a href="https://github.com/ff137">ff137</a></li>
+<li>✨ Adds support for paginated storage queries, and implements pagination for the wallets_list endpoint <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3000">#3000</a> <a href="https://github.com/ff137">ff137</a></li>
+<li>Enable no-transport mode as startup parameter <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/2990">#2990</a> <a href="https://github.com/PatStLouis">PatStLouis</a></li>
+</ul>
+</li>
+<li>
+<p>Test and Demo updates:</p>
+<ul>
+<li>Postgres Demo - Upgrade postgres and change entrypoint file <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3004">#3004</a> <a href="https://github.com/jamshale">jamshale</a></li>
+<li>Example integration test issuing 2 credentials under the same schema <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/2948">#2948</a> <a href="https://github.com/ianco">ianco</a></li>
+</ul>
+</li>
+<li>
+<p>Credential Exchange updates and fixes:</p>
+<ul>
+<li>Update TxnOrPublishRevocationsResultSchema <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3164">#3164</a> <a href="https://github.com/cl0ete">cl0ete</a></li>
+<li>For proof problem handler <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3068">#3068</a> <a href="https://github.com/loneil">loneil</a></li>
+<li>Breaking: Fix publishing multiple rev reg defs with endorsement <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3107">#3107</a> <a href="https://github.com/jamshale">jamshale</a></li>
+<li>Fix the check for vc_di proof <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3106">#3106</a> <a href="https://github.com/ianco">ianco</a></li>
+<li>Add DIF presentation exchange context and cache document <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3093">#3093</a> <a href="https://github.com/gmulhearn">gmulhearn</a></li>
+<li>Add by_format to terse webhook for presentations <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3081">#3081</a> <a href="https://github.com/ianco">ianco</a></li>
+<li>Use anoncreds registry for holder credential endpoints <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3063">#3063</a> <a href="https://github.com/jamshale">jamshale</a></li>
+<li>For proof problem handler, allow no connection record (OOB cases), prevent unhandled exception <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3068">#3068</a> <a href="https://github.com/loneil">loneil</a></li>
+<li>Handle failed tails server issuance <a href="https://www.hyperledger.org/projects/anoncreds">Anoncreds</a> <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3049">#3049</a> <a href="https://github.com/jamshale">jamshale</a></li>
+<li>Prevent getting stuck with no active registry <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3032">#3032</a> <a href="https://github.com/jamshale">jamshale</a></li>
+<li>Fix and refactor anoncreds revocation recovery <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3029">#3029</a> <a href="https://github.com/jamshale">jamshale</a></li>
+<li>Fix issue with requested to revoke before registry creation <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/2995">#2995</a> <a href="https://github.com/jamshale">jamshale</a></li>
+<li>Add support for revocable credentials in vc_di handler <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/2967">#2967</a> <a href="https://github.com/EmadAnwer">EmadAnwer</a></li>
+<li>Fix clear revocation logic <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/2956">#2956</a> <a href="https://github.com/jamshale">jamshale</a></li>
+<li>Anoncreds - Send full registry list when getting revocation states <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/2946">#2946</a> <a href="https://github.com/jamshale">jamshale</a></li>
+<li>Add missing VC-DI/LD-Proof verification method option <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/2867">#2867</a> <a href="https://github.com/PatStLouis">PatStLouis</a></li>
+<li>feat: Integrate AnonCreds with W3C VCDI Format Support in ACA-Py <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/2861">#2861</a> <a href="https://github.com/sarthakvijayvergiya">sarthakvijayvergiya</a></li>
+<li>Correct the response type in send_rev_reg_def <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/2355">#2355</a> <a href="https://github.com/ff137">ff137</a></li>
+</ul>
+</li>
+<li>
+<p>Upgrade Updates and Improvements:</p>
+<ul>
+<li>👷 Enable linux/arm64 docker builds <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3171">#3171</a> <a href="https://github.com/rblaine95">rblaine95</a></li>
+<li>BREAKING: Enable ARM-based ACA-Py artifacts by default by removing BBS+ Signatures as a default inclusion <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3127">#3127</a> <a href="https://github.com/amanji">amanji</a></li>
+<li>Re-enable ledger plugin when --no-legder is set <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3070">#3070</a> <a href="https://github.com/PatStLouis">PatStLouis</a></li>
+<li>Upgrade to anoncreds via api endpoint <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/2922">#2922</a> <a href="https://github.com/jamshale">jamshale</a></li>
+<li>🐛 fix wallet_update when only extra_settings requested <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/2612">#2612</a> <a href="https://github.com/ff137">ff137</a></li>
+</ul>
+</li>
+<li>
+<p>Release management pull requests:</p>
+<ul>
+<li>1.0.0 <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3172">#3172</a> <a href="https://github.com/swcurran">swcurran</a></li>
+<li>1.0.0rc6 <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3147">#3147</a> <a href="https://github.com/swcurran">swcurran</a></li>
+<li>1.0.0rc5 <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3118">#3118</a> <a href="https://github.com/swcurran">swcurran</a></li>
+<li>1.0.0rc4 <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3092">#3092</a> <a href="https://github.com/swcurran">swcurran</a></li>
+</ul>
+</li>
+<li>
+<p>Documentation, code formatting, publishing process updates:</p>
+<ul>
+<li>🎨 organize imports <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3169">#3169</a> <a href="https://github.com/ff137">ff137</a></li>
+<li>👷 fix lint workflow and 🎨 apply ruff linting <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3166">#3166</a> <a href="https://github.com/ff137">ff137</a></li>
+<li>Fix typo credetial, uste <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3146">#3146</a> <a href="https://github.com/rngadam">rngadam</a></li>
+<li>Fix links to AliceGetsAPhone.md from abs to rel and blob refs <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3128">#3128</a> <a href="https://github.com/rngadam">rngadam</a></li>
+<li>DOC: Verifiable Credential Data Integrity (VC-DI) Credentials in Aries Cloud Agent Python (ACA-Py) <a class="magiclink magiclink-github magiclink-issue" href="https://github.com/squidfunk/mkdocs-material/issues/2947" title="GitHub Issue: squidfunk/mkdocs-material #2947">#2947</a> <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3110">#3110</a> <a href="https://github.com/kenechukwu-orjiene">kenechukwu-orjiene</a></li>
+<li>demo/ACA-Py-Workshop.md tweak for Traction Sandbox update <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3136">#3136</a> <a href="https://github.com/loneil">loneil</a></li>
+<li>Adds documentation site docs for releases 0.11.0 <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3133">#3133</a> <a href="https://github.com/swcurran">swcurran</a></li>
+<li>Add descriptive error for issuance without RevRegRecord <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3109">#3109</a> <a href="https://github.com/jamshale">jamshale</a></li>
+<li>Switch from black to ruff <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3080">#3080</a> <a href="https://github.com/jamshale">jamshale</a></li>
+<li>fix: print provision messages when auto-provision is triggered <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3077">#3077</a> <a href="https://github.com/TheTechmage">TheTechmage</a></li>
+<li>Rule D417 <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3072">#3072</a> <a href="https://github.com/jamshale">jamshale</a></li>
+<li>Fix - only run integration tests on opened PR's <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3042">#3042</a> <a href="https://github.com/jamshale">jamshale</a></li>
+<li>docs: added section on environment variables <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3028">#3028</a> <a href="https://github.com/Executioner1939">Executioner1939</a></li>
+<li>Fix deprecation warnings <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/2756">#2756</a> <a href="https://github.com/ff137">ff137</a></li>
+<li>🎨 clarify LedgerError message when TAA is required and not accepted <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/2545">#2545</a> <a href="https://github.com/ff137">ff137</a></li>
+<li>Chore: fix marshmallow warnings <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/2398">#2398</a> <a href="https://github.com/ff137">ff137</a></li>
+<li>Fix formatting and grammatical errors in different readme's <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/2222">#2222</a> <a href="https://github.com/ff137">ff137</a></li>
+<li>Fix broken link in README <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/2221">#2221</a> <a href="https://github.com/ff137">ff137</a></li>
+<li>Manage integration tests with GitHub Actions (<a class="magiclink magiclink-github magiclink-issue" href="https://github.com/squidfunk/mkdocs-material/issues/2952" title="GitHub Issue: squidfunk/mkdocs-material #2952">#2952</a>) <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/2996">#2996</a> <a href="https://github.com/jamshale">jamshale</a></li>
+<li>Update README.md <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/2927">#2927</a> <a href="https://github.com/KPCOFGS">KPCOFGS</a></li>
+<li>Add anoncreds migration guide <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/2881">#2881</a> <a href="https://github.com/jamshale">jamshale</a></li>
+<li>Fix formatting and grammatical errors in different readme's <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/2222">#2222</a> <a href="https://github.com/ff137">ff137</a></li>
+<li>Fix broken link in README <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/2221">#2221</a> <a href="https://github.com/ff137">ff137</a></li>
+</ul>
+</li>
+<li>
+<p>Dependencies and Internal Updates:</p>
+<ul>
+<li>Add explicit write permission to publish workflow <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3167">#3167</a> <a href="https://github.com/jamshale">jamshale</a></li>
+<li>Upgrade python to version 3.12 <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3067">#3067</a> <a href="https://github.com/jamshale">jamshale</a></li>
+<li>Use a published version of aiohttp-apispec <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3019">#3019</a> <a href="https://github.com/jamshale">jamshale</a></li>
+<li>Add sonarcloud badges <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3014">#3014</a> <a href="https://github.com/jamshale">jamshale</a></li>
+<li>Switch from pytz to dateutil <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3012">#3012</a> <a href="https://github.com/jamshale">jamshale</a></li>
+<li>feat: soft binding for plugin flexibility <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3010">#3010</a> <a href="https://github.com/dbluhm">dbluhm</a></li>
+<li>feat: inject profile and session <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/2997">#2997</a> <a href="https://github.com/dbluhm">dbluhm</a></li>
+<li>✨ Faster uuid generation <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/2994">#2994</a> <a href="https://github.com/ff137">ff137</a></li>
+<li>Sonarcloud with code coverage <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/2968">#2968</a> <a href="https://github.com/jamshale">jamshale</a></li>
+<li>Fix Snyk sarif file <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/2961">#2961</a> <a href="https://github.com/pradeepp88">pradeepp88</a></li>
+<li>Add OpenSSF Scorecard GHA - weekly <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/2955">#2955</a> <a href="https://github.com/swcurran">swcurran</a></li>
+<li>Fix Snyk Container scanning workflow <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/2951">#2951</a> <a href="https://github.com/WadeBarnes">WadeBarnes</a></li>
+<li>chore: updating dependabot to support gha, python, docker and dev container packages <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/2945">#2945</a> <a href="https://github.com/rajpalc7">rajpalc7</a></li>
+<li>fix(interop): overly strict validation <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/2943">#2943</a> <a href="https://github.com/dbluhm">dbluhm</a></li>
+<li>⬆️ Upgrade test and lint dependencies <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/2939">#2939</a> <a href="https://github.com/ff137">ff137</a></li>
+<li>⬆️ Upgrade aiohttp-apispec <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/2920">#2920</a> <a href="https://github.com/ff137">ff137</a></li>
+<li>⬆️ Upgrade pydid (pydantic v2) <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/2919">#2919</a> <a href="https://github.com/ff137">ff137</a></li>
+<li>BREAKING feat: drop indy sdk <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/2892">#2892</a> <a href="https://github.com/dbluhm">dbluhm</a></li>
+<li>Change middleware registration order <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/2796">#2796</a> <a href="https://github.com/PatStLouis">PatStLouis</a></li>
+<li>⬆️ Upgrade pytest to 8.0 <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/2773">#2773</a> <a href="https://github.com/ff137">ff137</a></li>
+<li>⬆️ Update pytest-asyncio to 0.23.4 <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/2764">#2764</a> <a href="https://github.com/ff137">ff137</a></li>
+<li>Upgrade pre-commit and flake8 dependencies; fix flake8 warnings <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/2399">#2399</a> <a href="https://github.com/ff137">ff137</a></li>
+<li>⬆️ upgrade requests to latest <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/2336">#2336</a> <a href="https://github.com/ff137">ff137</a></li>
+<li>⬆️ upgrade pyjwt to latest; introduce leeway to jwt.decode <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/2335">#2335</a> <a href="https://github.com/ff137">ff137</a></li>
+<li>⬆️ upgrade packaging to latest <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/2334">#2334</a> <a href="https://github.com/ff137">ff137</a></li>
+<li>⬆️ upgrade marshmallow to latest <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/2322">#2322</a> <a href="https://github.com/ff137">ff137</a></li>
+<li>Upgrade codegen tools in scripts/generate-open-api-spec and publish Swagger 2.0 and OpenAPI 3.0 specs <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/2246">#2246</a> <a href="https://github.com/ff137">ff137</a></li>
+</ul>
+</li>
+<li>
+<p>Dependabot PRs:</p>
+<ul>
+<li>chore(deps): Bump ossf/scorecard-action from 2.3.3 to 2.4.0 in the all-actions group <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3134">#3134</a> <a href="https://github.com/dependabot bot">dependabot bot</a></li>
+<li>chore(deps-dev): Bump pre-commit from 3.7.1 to 3.8.0 <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3129">#3129</a> <a href="https://github.com/dependabot bot">dependabot bot</a></li>
+<li>chore(deps-dev): Bump ruff from 0.5.4 to 0.5.5 <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3131">#3131</a> <a href="https://github.com/dependabot bot">dependabot bot</a></li>
+<li>chore(deps): Bump mkdocs-material from 9.5.29 to 9.5.30 <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3130">#3130</a> <a href="https://github.com/dependabot bot">dependabot bot</a></li>
+<li>chore(deps-dev): Bump pytest from 8.3.1 to 8.3.2 <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3132">#3132</a> <a href="https://github.com/dependabot bot">dependabot bot</a></li>
+<li>chore(deps-dev): Bump ruff from 0.5.2 to 0.5.4 <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3114">#3114</a> <a href="https://github.com/dependabot bot">dependabot bot</a></li>
+<li>chore(deps): Bump pytest-asyncio from 0.23.7 to 0.23.8 in /demo/playground/examples <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3117">#3117</a> <a href="https://github.com/dependabot bot">dependabot bot</a></li>
+<li>chore(deps-dev): Bump pytest-ruff from 0.4.0 to 0.4.1 <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3113">#3113</a> <a href="https://github.com/dependabot bot">dependabot bot</a></li>
+<li>chore(deps-dev): Bump pytest from 8.2.2 to 8.3.1 <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3115">#3115</a> <a href="https://github.com/dependabot bot">dependabot bot</a></li>
+<li>Library update 15/07/24 / Fix unit test typing <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3103">#3103</a> <a href="https://github.com/jamshale">jamshale</a></li>
+<li>chore(deps): Bump certifi from 2024.6.2 to 2024.7.4 in /demo/playground/examples in the pip group <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3084">#3084</a> <a href="https://github.com/dependabot bot">dependabot bot</a></li>
+<li>chore(deps): Bump aries-askar from 0.3.1 to 0.3.2 <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3088">#3088</a> <a href="https://github.com/dependabot bot">dependabot bot</a></li>
+<li>chore(deps-dev): Bump ruff from 0.5.0 to 0.5.1 <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3087">#3087</a> <a href="https://github.com/dependabot bot">dependabot bot</a></li>
+<li>chore(deps): Bump mkdocs-material from 9.5.27 to 9.5.28 <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3089">#3089</a> <a href="https://github.com/dependabot bot">dependabot bot</a></li>
+<li>chore(deps): Bump certifi from 2024.6.2 to 2024.7.4 in the pip group <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3085">#3085</a> <a href="https://github.com/dependabot bot">dependabot bot</a></li>
+<li>chore(deps): Bump requests from 2.32.2 to 2.32.3 <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3076">#3076</a> <a href="https://github.com/dependabot bot">dependabot bot</a></li>
+<li>chore(deps): Bump uuid-utils from 0.8.0 to 0.9.0 <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3075">#3075</a> <a href="https://github.com/dependabot bot">dependabot bot</a></li>
+<li>chore(deps): Bump mike from 2.0.0 to 2.1.2 <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3074">#3074</a> <a href="https://github.com/dependabot bot">dependabot bot</a></li>
+<li>chore(deps-dev): Bump ruff from 0.4.10 to 0.5.0 <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3073">#3073</a> <a href="https://github.com/dependabot bot">dependabot bot</a></li>
+<li>chore(deps): Bump dawidd6/action-download-artifact from 5 to 6 in the all-actions group <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3064">#3064</a> <a href="https://github.com/dependabot bot">dependabot bot</a></li>
+<li>chore(deps): Bump markupsafe from 2.0.1 to 2.1.5 <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3062">#3062</a> <a href="https://github.com/dependabot bot">dependabot bot</a></li>
+<li>chore(deps-dev): Bump pydevd-pycharm from 193.6015.41 to 193.7288.30 <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3060">#3060</a> <a href="https://github.com/dependabot bot">dependabot bot</a></li>
+<li>chore(deps-dev): Bump ruff from 0.4.4 to 0.4.10 <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3058">#3058</a> <a href="https://github.com/dependabot bot">dependabot bot</a></li>
+<li>chore(deps): Bump the pip group with 2 updates <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3046">#3046</a> <a href="https://github.com/dependabot bot">dependabot bot</a></li>
+<li>chore(deps): Bump urllib3 from 2.2.1 to 2.2.2 in /demo/playground/examples in the pip group <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3045">#3045</a> <a href="https://github.com/dependabot bot">dependabot bot</a></li>
+<li>chore(deps): Bump marshmallow from 3.20.2 to 3.21.3 <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3038">#3038</a> <a href="https://github.com/dependabot bot">dependabot bot</a></li>
+<li>chore(deps): Bump packaging from 23.1 to 23.2 <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3037">#3037</a> <a href="https://github.com/dependabot bot">dependabot bot</a></li>
+<li>chore(deps): Bump mkdocs-material from 9.5.10 to 9.5.27 <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3036">#3036</a> <a href="https://github.com/dependabot bot">dependabot bot</a></li>
+<li>chore(deps): Bump configargparse from 1.5.5 to 1.7 <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3035">#3035</a> <a href="https://github.com/dependabot bot">dependabot bot</a></li>
+<li>chore(deps): Bump uuid-utils from 0.7.0 to 0.8.0 <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3034">#3034</a> <a href="https://github.com/dependabot bot">dependabot bot</a></li>
+<li>chore(deps): Bump dawidd6/action-download-artifact from 3 to 5 in the all-actions group <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3027">#3027</a> <a href="https://github.com/dependabot bot">dependabot bot</a></li>
+<li>chore(deps): Update prompt-toolkit requirement from ~=2.0.9 to ~=2.0.10 in /demo <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3026">#3026</a> <a href="https://github.com/dependabot bot">dependabot bot</a></li>
+<li>chore(deps-dev): Bump pytest from 8.2.1 to 8.2.2 <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3025">#3025</a> <a href="https://github.com/dependabot bot">dependabot bot</a></li>
+<li>chore(deps): Bump pydid from 0.5.0 to 0.5.1 <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3024">#3024</a> <a href="https://github.com/dependabot bot">dependabot bot</a></li>
+<li>chore(deps): Bump sphinx from 1.8.4 to 1.8.6 <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3021">#3021</a> <a href="https://github.com/dependabot bot">dependabot bot</a></li>
+<li>chore(deps): Bump actions/checkout from 3 to 4 in the all-actions group <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3011">#3011</a> <a href="https://github.com/dependabot bot">dependabot bot</a></li>
+<li>Merge all demo dependabot PRs <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3008">#3008</a> <a href="https://github.com/PatStLouis">PatStLouis</a></li>
+<li>Merge all poetry dependabot PRs <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3007">#3007</a> <a href="https://github.com/PatStLouis">PatStLouis</a></li>
+<li>chore(deps): Bump hyperledger/aries-cloudagent-python from py3.9-0.9.0 to py3.9-0.12.1 in /demo/multi-demo <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/2976">#2976</a> <a href="https://github.com/dependabot bot">dependabot bot</a></li>
+<li>chore(deps): Bump hyperledger/aries-cloudagent-python from py3.9-0.10.4 to py3.9-0.12.1 in /demo/playground <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/2975">#2975</a> <a href="https://github.com/dependabot bot">dependabot bot</a></li>
+<li>chore(deps): Bump hyperledger/aries-cloudagent-python from py3.9-0.9.0 to py3.9-0.12.1 in /demo/docker-agent <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/2973">#2973</a> <a href="https://github.com/dependabot bot">dependabot bot</a></li>
+<li>chore(deps): Bump sphinx-rtd-theme from 1.1.1 to 1.3.0 in /docs <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/2970">#2970</a> <a href="https://github.com/dependabot bot">dependabot bot</a></li>
+<li>chore(deps): Bump untergeek/curator from 8.0.2 to 8.0.15 in /demo/elk-stack/extensions/curator <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/2969">#2969</a> <a href="https://github.com/dependabot bot">dependabot bot</a></li>
+<li>chore(deps): Bump ecdsa from 0.16.1 to 0.19.0 in the pip group across 1 directory <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/2933">#2933</a> <a href="https://github.com/dependabot bot">dependabot bot</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="0122">0.12.2<a class="headerlink" href="#0122" title="Permanent link">&para;</a></h2>
+<h3 id="august-2-2024">August 2, 2024<a class="headerlink" href="#august-2-2024" title="Permanent link">&para;</a></h3>
+<p>A patch release to add the verification of a linkage between an inbound message and its associated connection (if any) before processing the message. Also adds some additional cleanup/fix PRs from the main branch (see list below) that might be useful for deployments currently using <a href="#0121">Release 0.12.1</a> or <a href="#0120">0.12.0</a>.</p>
+<h3 id="0122-breaking-changes">0.12.2 Breaking Changes<a class="headerlink" href="#0122-breaking-changes" title="Permanent link">&para;</a></h3>
+<p>There are no breaking changes in this release.</p>
+<h4 id="0122-categorized-list-of-pull-requests">0.12.2 Categorized List of Pull Requests<a class="headerlink" href="#0122-categorized-list-of-pull-requests" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Dependency update and release PR<ul>
+<li>[ PATCH ] 0.12.x with PR 3081 terse webhooks <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3141">#3141</a> <a href="https://github.com/jamshale">jamshale</a></li>
+<li>Patch release 0.12.x <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3121">#3121</a> <a href="https://github.com/jamshale">jamshale</a></li>
+</ul>
+</li>
+<li>Release management pull requests<ul>
+<li>0.12.2 <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3145">#3145</a> <a href="https://github.com/swcurran">swcurran</a></li>
+<li>0.12.2rc1 <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3123">#3123</a> <a href="https://github.com/swcurran">swcurran</a></li>
+</ul>
+</li>
+<li>PRs cherry-picked into <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3120">#3121</a> from the <code>main</code> branch:<ul>
+<li>fix: multiuse invites with did peer 4 <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3112">#3112</a> <a href="https://github.com/dbluhm">dbluhm</a></li>
+<li>Check connection is ready in all connection required handlers <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3095">#3095</a> <a href="https://github.com/jamshale">jamshale</a></li>
+<li>Add by_format to terse webhook for presentations <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3081">#3081</a> <a href="https://github.com/ianco">ianco</a></li>
+<li>fix: respond to did:peer:1 with did:peer:4 <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3050">#3050</a> <a href="https://github.com/dbluhm">dbluhm</a></li>
+<li>feat: soft binding for plugin flexibility <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3010">#3010</a> <a href="https://github.com/dbluhm">dbluhm</a></li>
+<li>feat: inject profile and session <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/2997">#2997</a> <a href="https://github.com/dbluhm">dbluhm</a></li>
+<li>feat: external signature suite provider interface <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/2835">#2835</a> <a href="https://github.com/dbluhm">dbluhm</a></li>
+<li>fix(interop): overly strict validation <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/2943">#2943</a> <a href="https://github.com/dbluhm">dbluhm</a></li>
+</ul>
+</li>
+</ul>
 <h2 id="0121">0.12.1<a class="headerlink" href="#0121" title="Permanent link">&para;</a></h2>
 <h3 id="april-26-2024">April 26, 2024<a class="headerlink" href="#april-26-2024" title="Permanent link">&para;</a></h3>
 <p>Release 0.12.1 is a small patch to cleanup some edge case issues in the handling of Out of Band invitations, revocation notification webhooks, and connection querying uncovered after the 0.12.0 release. Fixes and improvements were also made to the generation of ACA-Py's OpenAPI specifications.</p>
@@ -2698,6 +3673,62 @@
 <li>0.12.0rc1 <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/2800">#2800</a> <a href="https://github.com/swcurran">swcurran</a></li>
 <li>0.12.0rc1 <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/2799">#2799</a> <a href="https://github.com/swcurran">swcurran</a></li>
 <li>0.12.0rc0 <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/2732">#2732</a> <a href="https://github.com/swcurran">swcurran</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="0113">0.11.3<a class="headerlink" href="#0113" title="Permanent link">&para;</a></h2>
+<h3 id="august-2-2024_1">August 2, 2024<a class="headerlink" href="#august-2-2024_1" title="Permanent link">&para;</a></h3>
+<p>A patch release to add a fix that ensures that sufficient webhook information is sent to an ACA-Py controller that is executing the <a href="https://hyperledger.github.io/aries-rfcs/latest/aip2/0454-present-proof-v2/">AIP 2.0 Present Proof 2.0 Protocol</a>.</p>
+<h3 id="0113-breaking-changes">0.11.3 Breaking Changes<a class="headerlink" href="#0113-breaking-changes" title="Permanent link">&para;</a></h3>
+<p>There are no breaking changes in this release.</p>
+<h4 id="0113-categorized-list-of-pull-requests">0.11.3 Categorized List of Pull Requests<a class="headerlink" href="#0113-categorized-list-of-pull-requests" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Dependency update and release PR<ul>
+<li>[ PATCH ] 0.11.x with PR 3081 terse webhooks <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3142">#3142</a> <a href="https://github.com/jamshale">jamshale</a></li>
+</ul>
+</li>
+<li>Release management pull requests<ul>
+<li>0.11.3 <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3144">#3144</a> <a href="https://github.com/swcurran">swcurran</a></li>
+</ul>
+</li>
+<li>PRs cherry-picked into <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3142">#3142</a> from the <code>main</code> branch:<ul>
+<li>Add by_format to terse webhook for presentations <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3081">#3081</a> <a href="https://github.com/ianco">ianco</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="0112">0.11.2<a class="headerlink" href="#0112" title="Permanent link">&para;</a></h2>
+<h3 id="july-25-2024">July 25, 2024<a class="headerlink" href="#july-25-2024" title="Permanent link">&para;</a></h3>
+<p>A patch release to add the verification of a linkage between an inbound message and its associated connection (if any) before processing the message.</p>
+<h3 id="0112-breaking-changes">0.11.2 Breaking Changes<a class="headerlink" href="#0112-breaking-changes" title="Permanent link">&para;</a></h3>
+<p>There are no breaking changes in this release.</p>
+<h4 id="0112-categorized-list-of-pull-requests">0.11.2 Categorized List of Pull Requests<a class="headerlink" href="#0112-categorized-list-of-pull-requests" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Dependency update and release PR<ul>
+<li>Apply security patch 0.11.x <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3120">#3120</a> <a href="https://github.com/jamshale">jamshale</a></li>
+</ul>
+</li>
+<li>Release management pull requests<ul>
+<li>0.11.2 <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3122">#3122</a> <a href="https://github.com/swcurran">swcurran</a></li>
+</ul>
+</li>
+<li>PRs cherry-picked into <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3120">#3120</a> from the <code>main</code> branch:<ul>
+<li>Check connection is ready in all connection required handlers <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/3095">#3095</a> <a href="https://github.com/jamshale">jamshale</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="0111">0.11.1<a class="headerlink" href="#0111" title="Permanent link">&para;</a></h2>
+<h3 id="may-7-2024">May 7, 2024<a class="headerlink" href="#may-7-2024" title="Permanent link">&para;</a></h3>
+<p>A patch release to update the <code>aiohttp</code> library such that a reported serious
+vulnerability is addressed such that a crafted payload delivered to <code>aiohttp</code>
+can put it in an infinite loop, which can be used for a low cost denial of
+service attack. <a href="https://github.com/advisories/GHSA-5m98-qgg9-wh84">CVE-2024-30251</a> describes the issue.</p>
+<h3 id="0111-breaking-changes">0.11.1 Breaking Changes<a class="headerlink" href="#0111-breaking-changes" title="Permanent link">&para;</a></h3>
+<p>There are no breaking changes in this release. The only changed is the updated
+<code>aiohttp</code> dependency.</p>
+<h4 id="0111-categorized-list-of-pull-requests">0.11.1 Categorized List of Pull Requests<a class="headerlink" href="#0111-categorized-list-of-pull-requests" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Dependency update and release PR<ul>
+<li>0.11.1 and aiohttp update <a href="https://github.com/hyperledger/aries-cloudagent-python/pull/2936">#2936</a> <a href="https://github.com/swcurran">swcurran</a></li>
 </ul>
 </li>
 </ul>
@@ -3614,7 +4645,7 @@ couple of other PRs were added to the release, as listed below, and in
 <h2 id="074">0.7.4<a class="headerlink" href="#074" title="Permanent link">&para;</a></h2>
 <h3 id="june-30-2022">June 30, 2022<a class="headerlink" href="#june-30-2022" title="Permanent link">&para;</a></h3>
 <blockquote>
-<p><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/26a0.svg" title=":warning:" /> <strong>Existing multitenant JWTs invalidated when a new JWT is
+<p><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/26a0.svg" title=":warning:" /> <strong>Existing multitenant JWTs invalidated when a new JWT is
 generated</strong>: If you have a pre-existing implementation with existing Admin API
 authorization JWTs, invoking the endpoint to get a JWT now invalidates the
 existing JWT. Previously an identical JWT would be created. Please see this
@@ -4439,7 +5470,7 @@ async with profile.session() as session:
         
           <button type="button" class="md-top md-icon" data-md-component="top" hidden>
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
   Back to top
 </button>
         
@@ -4455,7 +5486,7 @@ async with profile.session() as session:
           <a href=".." class="md-footer__link md-footer__link--prev" aria-label="Previous: ACA-Py README">
             <div class="md-footer__button md-icon">
               
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
             </div>
             <div class="md-footer__title">
               <span class="md-footer__direction">
@@ -4469,18 +5500,18 @@ async with profile.session() as session:
         
         
           
-          <a href="../features/DevReadMe/" class="md-footer__link md-footer__link--next" aria-label="Next: Developer Introduction">
+          <a href="../LTS-Strategy/" class="md-footer__link md-footer__link--next" aria-label="Next: ACA-Py Long Term Support (LTS) Policy">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Developer Introduction
+                ACA-Py Long Term Support (LTS) Policy
               </div>
             </div>
             <div class="md-footer__button md-icon">
               
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
             </div>
           </a>
         
@@ -4509,10 +5540,10 @@ async with profile.session() as session:
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy", "navigation.expand", "navigation.footer", "navigation.instant", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "toc.follow"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy", "navigation.expand", "navigation.footer", "navigation.instant", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "toc.follow"], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.ad660dcc.min.js"></script>
+      <script src="../assets/javascripts/bundle.83f73b43.min.js"></script>
       
     
   </body>
