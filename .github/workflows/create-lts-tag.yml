@@ -53,7 +53,7 @@ jobs:
 
       - name: Create or update GitHub LTS Release
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           LTS_TAG: ${{ steps.vars.outputs.LTS_TAG }}
           RELEASE_BODY: ${{ env.RELEASE_BODY }}
         run: |
