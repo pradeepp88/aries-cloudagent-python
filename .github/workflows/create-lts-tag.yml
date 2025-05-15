@@ -1,0 +1,44 @@
+name: Create or Update LTS Tag on Release
+
+on:
+  release:
+    types: [published]
+
+permissions:
+  contents: write
+
+jobs:
+  create-lts-tag:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Set up Git identity
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+
+      - name: Validate release branch and create tag
+        env:
+          BRANCH_REF: ${{ github.event.release.target_commitish }}
+        run: |
+          echo "Release target branch: $BRANCH_REF"
+
+          if [[ "$BRANCH_REF" =~ ^0\.12 ]]; then
+            LTS_TAG="0.12-lts"
+          elif [[ "$BRANCH_REF" =~ ^1\.2 ]]; then
+            LTS_TAG="1.2-lts"
+          else
+            echo "Release not from a tracked LTS branch. Skipping."
+            exit 0
+          fi
+
+          # Tag the current commit (HEAD) with LTS tag
+          COMMIT_SHA=$(git rev-parse HEAD)
+          echo "Creating/updating tag $LTS_TAG at commit $COMMIT_SHA"
+          git tag -f "$LTS_TAG" "$COMMIT_SHA"
+          git push origin -f "$LTS_TAG"
