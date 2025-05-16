@@ -1,4 +1,4 @@
-name: Tag and Release LTS images
+name: Tag and Recreate LTS Release
 
 on:
   release:
@@ -8,7 +8,7 @@ permissions:
   contents: write
 
 jobs:
-  create-lts-tag-and-release:
+  recreate-lts-release:
     runs-on: ubuntu-latest
 
     steps:
@@ -22,14 +22,14 @@ jobs:
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
 
-      - name: Determine branch and prepare LTS tag
+      - name: Determine LTS tag and update
         id: vars
         env:
           BRANCH_REF: ${{ github.event.release.target_commitish }}
           RELEASE_TAG: ${{ github.event.release.tag_name }}
           RELEASE_BODY: ${{ github.event.release.body }}
         run: |
-          echo "Release published from: $BRANCH_REF"
+          echo "Release published from branch: $BRANCH_REF"
 
           if [[ "$BRANCH_REF" =~ ^0\.12 ]]; then
             VERSION_PREFIX="0.12"
@@ -42,28 +42,31 @@ jobs:
 
           LTS_TAG="${VERSION_PREFIX}-lts"
           echo "LTS_TAG=$LTS_TAG" >> "$GITHUB_OUTPUT"
-          echo "RELEASE_BODY<<EOF" >> "$GITHUB_ENV"
-          echo "${RELEASE_BODY}" >> "$GITHUB_ENV"
-          echo "EOF" >> "$GITHUB_ENV"
 
-          # Force-update the tag
+          # Force update the tag to the current commit
           COMMIT_SHA=$(git rev-parse HEAD)
           git tag -f "$LTS_TAG" "$COMMIT_SHA"
           git push origin -f "$LTS_TAG"
 
-      - name: Create or update GitHub LTS Release
+          # Write release notes into env (for multiline input)
+          echo "RELEASE_BODY<<EOF" >> "$GITHUB_ENV"
+          echo "${RELEASE_BODY}" >> "$GITHUB_ENV"
+          echo "EOF" >> "$GITHUB_ENV"
+
+      - name: Delete existing GitHub release (if any)
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          LTS_TAG: ${{ steps.vars.outputs.LTS_TAG }}
+        run: |
+          echo "Trying to delete existing release for $LTS_TAG"
+          gh release delete "$LTS_TAG" -y
+
+      - name: Create fresh LTS GitHub release
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           LTS_TAG: ${{ steps.vars.outputs.LTS_TAG }}
           RELEASE_BODY: ${{ env.RELEASE_BODY }}
         run: |
-          echo "Creating or updating GitHub release: $LTS_TAG"
-
-          # Try updating first
-          if gh release view "$LTS_TAG" >/dev/null 2>&1; then
-            echo "Release $LTS_TAG exists, updating notes"
-            gh release edit "$LTS_TAG" --notes "$RELEASE_BODY" || true
-          else
-            echo "Creating new release for $LTS_TAG"
-            gh release create "$LTS_TAG" --title "$LTS_TAG" --notes "$RELEASE_BODY"
-          fi
+          echo "Creating new GitHub release for $LTS_TAG"
+          gh release create "$LTS_TAG" --title "$LTS_TAG" --notes "$RELEASE_BODY"
