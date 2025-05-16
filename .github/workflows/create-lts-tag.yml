@@ -73,7 +73,7 @@ jobs:
   
   call-publish-image:
     needs: recreate-lts-release
-    uses: ./.github/workflows/publish-image.yml
+    uses: ./.github/workflows/publish.yml
     with:
       tag: ${{ needs.recreate-lts-release.outputs.lts_tag }}
       platforms: linux/amd64,linux/arm64
