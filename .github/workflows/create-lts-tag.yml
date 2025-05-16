@@ -53,7 +53,7 @@ jobs:
           echo "${RELEASE_BODY}" >> "$GITHUB_ENV"
           echo "EOF" >> "$GITHUB_ENV"
 
-      - name: Delete existing GitHub release (if any)
+      - name: Delete existing LTS release (if any)
         continue-on-error: true
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -62,7 +62,7 @@ jobs:
           echo "Trying to delete existing release for $LTS_TAG"
           gh release delete "$LTS_TAG" -y
 
-      - name: Create fresh LTS GitHub release
+      - name: Create fresh LTS release
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           LTS_TAG: ${{ steps.vars.outputs.LTS_TAG }}
@@ -70,3 +70,10 @@ jobs:
         run: |
           echo "Creating new GitHub release for $LTS_TAG"
           gh release create "$LTS_TAG" --title "$LTS_TAG" --notes "$RELEASE_BODY"
+  
+  call-publish-image:
+    needs: recreate-lts-release
+    uses: ./.github/workflows/publish-image.yml
+    with:
+      tag: ${{ needs.recreate-lts-release.outputs.lts_tag }}
+      platforms: linux/amd64,linux/arm64
