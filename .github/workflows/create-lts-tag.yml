@@ -76,6 +76,6 @@ jobs:
     needs: recreate-lts-release
     uses: ./.github/workflows/publish.yml
     with:
-      tag: ${{ needs.recreate-lts-release.outputs.lts_tag }}
+      tag: ${{ needs.recreate-lts-release.outputs.LTS_TAG }}
       ref: ${{ github.event.release.tag_name }}
       platforms: linux/amd64,linux/arm64
