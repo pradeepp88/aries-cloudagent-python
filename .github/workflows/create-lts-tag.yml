@@ -38,6 +38,7 @@ jobs:
 
           # Creating a LTS tag from the branch name
           VERSION_PREFIX="${BRANCH_REF%.lts}"
+          echo "VERSION_PREFIX=$VERSION_PREFIX" >> $GITHUB_ENV
           LTS_TAG="${VERSION_PREFIX}-lts"
           echo "LTS_TAG=$LTS_TAG" >> "$GITHUB_OUTPUT"
 
