@@ -43,7 +43,8 @@ jobs:
           echo "LTS_TAG=$LTS_TAG" >> "$GITHUB_OUTPUT"
 
           # Force update the tag to the current commit
-          git push origin -f "$LTS_TAG" ${{ github.event.release.target_commitish }}
+          git tag -f "$LTS_TAG" ${{ github.event.release.target_commitish }}
+          git push origin -f "$LTS_TAG" 
 
           # Write release notes into env (for multiline input)
           echo "RELEASE_BODY<<EOF" >> "$GITHUB_ENV"
