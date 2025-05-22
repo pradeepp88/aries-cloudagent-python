@@ -43,6 +43,7 @@ jobs:
 
           LTS_TAG="${VERSION_PREFIX}-lts"
           echo "LTS_TAG=$LTS_TAG" >> "$GITHUB_OUTPUT"
+          echo "LTS_TAG=$LTS_TAG" >> "$GITHUB_ENV"
 
           # Force update the tag to the current commit
           COMMIT_SHA=$(git rev-parse HEAD)
@@ -76,6 +77,6 @@ jobs:
     needs: recreate-lts-release
     uses: ./.github/workflows/publish.yml
     with:
-      tag: ${{ needs.recreate-lts-release.outputs.LTS_TAG }}
+      tag: ${{ env.LTS_TAG }}
       ref: ${{ github.event.release.tag_name }}
       platforms: linux/amd64,linux/arm64
