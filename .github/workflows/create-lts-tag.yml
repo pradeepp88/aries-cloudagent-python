@@ -3,7 +3,9 @@ name: Tag and Recreate LTS Release
 on:
   release:
     types: [published]
-
+    branches: 
+      - '*.lts'
+      
 permissions:
   contents: write
   packages: write
@@ -45,12 +47,12 @@ jobs:
 
           LTS_TAG="${VERSION_PREFIX}-lts"
           echo "LTS_TAG=$LTS_TAG" >> "$GITHUB_OUTPUT"
-          echo "LTS_TAG=$LTS_TAG" >> "$GITHUB_ENV"
 
           # Force update the tag to the current commit
-          COMMIT_SHA=$(git rev-parse HEAD)
-          git tag -f "$LTS_TAG" "$COMMIT_SHA"
-          git push origin -f "$LTS_TAG"
+          # COMMIT_SHA=${{ github.sha }}
+          # git tag -f "$LTS_TAG" "$COMMIT_SHA"
+          # git push origin -f "$LTS_TAG"
+          git push origin -f "$LTS_TAG" refs/heads/${{ github.event.release.target_commitish }} || exit 1
 
           # Write release notes into env (for multiline input)
           echo "RELEASE_BODY<<EOF" >> "$GITHUB_ENV"
