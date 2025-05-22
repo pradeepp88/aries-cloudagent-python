@@ -11,6 +11,8 @@ permissions:
 jobs:
   recreate-lts-release:
     runs-on: ubuntu-latest
+    outputs:
+      lts_tag: ${{ steps.vars.outputs.LTS_TAG }}
 
     steps:
       - name: Checkout repository
@@ -77,6 +79,6 @@ jobs:
     needs: recreate-lts-release
     uses: ./.github/workflows/publish.yml
     with:
-      tag: ${{ env.LTS_TAG }}
+      tag: ${{ needs.recreate-lts-release.outputs.lts_tag }}
       ref: ${{ github.event.release.tag_name }}
       platforms: linux/amd64,linux/arm64
