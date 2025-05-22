@@ -36,23 +36,15 @@ jobs:
         run: |
           echo "Release published from branch: $BRANCH_REF"
 
-          if [[ "$BRANCH_REF" =~ ^0\.12 ]]; then
-            VERSION_PREFIX="0.12"
-          elif [[ "$BRANCH_REF" =~ ^1\.2 ]]; then
-            VERSION_PREFIX="1.2"
-          else
-            echo "Skipping: not an LTS branch"
-            exit 0
-          fi
-
+          # Creating a LTS tag from the branch name
+          VERSION_PREFIX="${BRANCH_REF%.lts}"
           LTS_TAG="${VERSION_PREFIX}-lts"
           echo "LTS_TAG=$LTS_TAG" >> "$GITHUB_OUTPUT"
 
           # Force update the tag to the current commit
-          # COMMIT_SHA=${{ github.sha }}
-          # git tag -f "$LTS_TAG" "$COMMIT_SHA"
-          # git push origin -f "$LTS_TAG"
-          git push origin -f "$LTS_TAG" refs/heads/${{ github.event.release.target_commitish }} || exit 1
+          git tag -a "$LTS_TAG" 
+          git push origin -f "$LTS_TAG"
+          git push origin -f "$LTS_TAG" ${{ github.event.release.target_commitish }}
 
           # Write release notes into env (for multiline input)
           echo "RELEASE_BODY<<EOF" >> "$GITHUB_ENV"
