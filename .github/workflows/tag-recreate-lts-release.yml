@@ -1,5 +1,5 @@
-# This Github Action will run when a release is published from the LTS branches and create 
-# new LTS release, tag and publish the image in GHCR
+# This Action will run when a release is published from the LTS branches 
+# and create new LTS tag, release and publish the image in GHCR
 
 name: Tag and Recreate LTS Release
 
@@ -15,6 +15,7 @@ permissions:
 
 jobs:
   recreate-lts-release:
+    name: Recreate LTS Release
     runs-on: ubuntu-latest
     outputs:
       lts_tag: ${{ steps.vars.outputs.LTS_TAG }}
@@ -73,6 +74,7 @@ jobs:
           gh release create "$LTS_TAG" --title "$LTS_TAG" --notes "$RELEASE_BODY"
   
   call-publish-image:
+    name: Publish LTS Image in GHCR
     needs: recreate-lts-release
     uses: ./.github/workflows/publish.yml
     with:
