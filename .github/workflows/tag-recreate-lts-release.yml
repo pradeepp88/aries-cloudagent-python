@@ -1,3 +1,6 @@
+# This Github Action will run when a release is published from the LTS branches and create 
+# new LTS release, tag and publish the image in GHCR
+
 name: Tag and Recreate LTS Release
 
 on:
@@ -41,7 +44,6 @@ jobs:
           echo "VERSION_PREFIX=$VERSION_PREFIX" >> $GITHUB_ENV
           LTS_TAG="${VERSION_PREFIX}-lts"
           echo "LTS_TAG=$LTS_TAG" >> "$GITHUB_OUTPUT"
-          echo "LTS_TAG=$LTS_TAG"
 
           # Force update the tag to the current commit
           git tag -f "$LTS_TAG" $GITHUB_SHA
