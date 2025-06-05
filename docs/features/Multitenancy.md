@@ -64,7 +64,6 @@ jwt-secret: Something very secret
 
 With askar wallets it's possible to have all tenant wallets in a single wallet or each have an individual wallet. The default is to have each tenant in a separate wallet. This is done to keep the wallets separate and to allow for more flexibility in the future. If you want to have all tenants in a single wallet you can set the `multitenancy-config` with the value `{"wallet_type": "single-wallet-askar"}`. If you want to explicitly set the wallet type for each tenant you can do so by setting the `multitenancy-config` with the value `{"wallet_type": "basic"}`. See .vscode-sample/multitenant-admin.yml for an example.
 
-```yaml
 
 ## Multi-tenant Admin API
 
