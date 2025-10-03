@@ -1,14 +1,78 @@
 # Aries Cloud Agent Python Changelog
 
-## 1.3.1rc0
+## 1.3.2
 
-### May 30, 2025
+### August 26, 2025
+
+ACA-Py 1.3.2 is a maintenance and enhancement release with a mix of bug fixes, dependency updates, documentation improvements, and operational enhancements. It focuses on improving reliability in credential revocation handling, refining webhook payload structures, modernizing async task management, and ensuring better resilience when opening the Askar store. Developers will also find several documentation updates and dependency cleanups. See the [Categorized List of Changes]() below for more details about the changes in this release.
+
+The release includes a fix for a change ([#3081](https://github.com/openwallet-foundation/acapy/pull/3081) added in [Release 1.0.0](https://github.com/openwallet-foundation/acapy/releases/tag/1.0.0)) that introduced a PII leakage possibility. See the [1.3.2 Breaking Changes](#132-breaking-changes) section below for details.
+
+### 1.3.2 Deprecation Notices
+
+In an upcoming ACA-Py release, we will be dropping from the core ACA-Py repository the [AIP 1.0] [RFC 0037 Issue Credentials v1.0] and [RFC 0037 Present Proof v1.0] DIDComm protocols. Each of the protocols will be moved to the [ACA-Py Plugins] repo. All ACA-Py implementers that use those protocols **SHOULD** update as soon as possible to the [AIP 2.0] versions of those protocols ([RFC 0453 Issue Credential v2.0] and [RFC 0454 Present Proof v2.0], respectively). Once the protocols are removed from ACA-Py, anyone still using those protocols **MUST** adjust their configuration to load those protocols from the respective plugins.
+
+[ACA-Py Plugins]: https://plugins.aca-py.org
+[RFC 0160 Connections]: https://identity.foundation/aries-rfcs/latest/features/0160-connection-protocol/
+[RFC 0037 Issue Credentials v1.0]: https://identity.foundation/aries-rfcs/latest/features/0036-issue-credential/
+[RFC 0037 Present Proof v1.0]: https://identity.foundation/aries-rfcs/latest/features/0037-present-proof/
+[AIP 1.0]: https://github.com/decentralized-identity/aries-rfcs/tree/main/concepts/0302-aries-interop-profile#aries-interop-profile-version-10
+[AIP 2.0]: https://identity.foundation/aries-rfcs/latest/aip2/0003-protocols/
+[RFC 0434 Out of Band]: https://identity.foundation/aries-rfcs/latest/aip2/0434-outofband/
+[RFC 0023 DID Exchange]: https://identity.foundation/aries-rfcs/latest/aip2/0023-did-exchange/
+[RFC 0453 Issue Credential v2.0]: https://identity.foundation/aries-rfcs/latest/aip2/0453-issue-credential-v2/
+[RFC 0454 Present Proof v2.0]: https://identity.foundation/aries-rfcs/latest/aip2/0454-present-proof-v2/
+[Connections Protocol Plugin]: https://plugins.aca-py.org/latest/connections/
+
+### 1.3.2 Breaking Changes
+
+Release 1.3.2 includes a privacy-related change that also introduces a breaking change for some deployments -- including those using [acapy-vc-authn-oidc](https://github.com/openwallet-foundation/acapy-vc-authn-oidc).
+
+- **Removal of `by_format` from webhook payloads** ([#3837](https://github.com/openwallet-foundation/acapy/pull/3837))  
+  In a recent update, ACA-Py webhook events for credential and presentation v2.0 exchanges included a `by_format` field by default, instead of only when used with the `ACAPY_DEBUG_WEBHOOKS` configuration parameter. `by_format` contains sensitive protocol payload data and, in some cases, could result in **personally identifiable information (PII) being logged**. This behavior has been reverted. 
+
+  **Impact when upgrading:**  
+  - If your deployment relies on the `by_format` field in webhook events you need to ensure the startup parameter `ACAPY_DEBUG_WEBHOOKS` is activated.
+  - Most applications that simply respond to the state of v2.0 credential exchanges (e.g., `credential_issued`, `presentation_verified`) are not affected.  
+  - Applications that parsed or logged the `by_format` contents must ensure the `ACAPY_DEBUG_WEBHOOKS` configuration is set, or better, update their logic to not require that information.
+
+Because this change addresses a **privacy issue** (PII leakage), it is being included in the 1.3.x patch series rather than requiring a minor release increment.
+
+### 1.3.2 Categorized List of Pull Requests
+
+- **Bug Fixes and Behavior Changes**
+  - fix: update tails server upload methods to return public file URIs [\#3852](https://github.com/openwallet-foundation/acapy/pull/3852) [TheTechmage](https://github.com/TheTechmage)
+  - Only strip did:sov dids to unqualified did in oob receive invitation requests (holder) [\#3846](https://github.com/openwallet-foundation/acapy/pull/3846) [jamshale](https://github.com/jamshale)
+  - Remove by_format from standard webhook payloads [\#3837](https://github.com/openwallet-foundation/acapy/pull/3837) [jamshale](https://github.com/jamshale)
+  - Fixed debug port setting [\#3828](https://github.com/openwallet-foundation/acapy/pull/3828) [Gavinok](https://github.com/Gavinok)
+  - Fix: Some asyncio task management and modernization [\#3818](https://github.com/openwallet-foundation/acapy/pull/3818) [jamshale](https://github.com/jamshale)
+- **Operational and Dependency Updates**
+  - Update did-webvh package version [\#3860](https://github.com/openwallet-foundation/acapy/pull/3860) [PatStLouis](https://github.com/PatStLouis)
+  - :recycle: Sync ruff version [\#3859](https://github.com/openwallet-foundation/acapy/pull/3859) [ff137](https://github.com/ff137)
+  - :heavy_minus_sign: Remove unused dependency: ecdsa [\#3847](https://github.com/openwallet-foundation/acapy/pull/3847) [ff137](https://github.com/ff137)
+  - Add retries when opening the askar store / Refactor store.py [\#3811](https://github.com/openwallet-foundation/acapy/pull/3811) [jamshale](https://github.com/jamshale)
+  - Upgrade pytest-asyncio to major version 1.0.0 [\#3810](https://github.com/openwallet-foundation/acapy/pull/3810) [jamshale](https://github.com/jamshale)
+- **Documentation and README Updates**
+  - Add DeepWiki AI Docs Badge and revise the README intro [\#3853](https://github.com/openwallet-foundation/acapy/pull/3853) [swcurran](https://github.com/swcurran)
+  - Update README with latest on LTS Release Status [\#3833](https://github.com/openwallet-foundation/acapy/pull/3833) [swcurran](https://github.com/swcurran)
+  - Update scenarios to openwallet acapy-minimal-example repo [\#3851](https://github.com/openwallet-foundation/acapy/pull/3851) [jamshale](https://github.com/jamshale)
+- **Dependabot PRs**
+  - [Link to list of Dependabot PRs in this release](https://github.com/openwallet-foundation/acapy/pulls?q=is%3Apr+is%3Amerged+merged%3A2025-07-02..2025-08-26+author%3Aapp%2Fdependabot+)
+- **Release management pull requests**:
+  - 1.3.2 [\#3863](https://github.com/openwallet-foundation/acapy/pull/3863) [swcurran](https://github.com/swcurran)
+  - 1.3.2rc0 [\#3858](https://github.com/openwallet-foundation/acapy/pull/3858) [swcurran](https://github.com/swcurran)
+
+## 1.3.1
+
+### July 02, 2025
 
 ACA-Py 1.3.1 is a maintenance release that focuses on improving reliability, developer experience, and project documentation. It includes important fixes, updated links and metadata, and minor enhancements, particularly in support of long-term stability and governance clarity.
 
 This release includes:
 
 - Extensive updates to outdated or redirected links in documentation and code comments, moving references from Hyperledger to the OpenWallet Foundation and other current locations.
+- A fix to a concurrency issue (described in [\#3738](https://github.com/openwallet-foundation/acapy/issues/3738)) in the newer `anoncreds` endpoint that assigns a revocation index to a credential. The operation is new wrapped in a transaction, ensuring data consistency under load.
+- Expanded options for running the ACA-Py demo, with support added for Microsoft Dev Tunnels and improved out-of-band connection flows.
 - Updates to project governance documentation, including the Code of Conduct, Security Policy, and Maintainers Guide, aligned with the OpenWallet Foundation processes.
 - Logging improvements for better observability, especially around public DID handling, routing keys, and outbound websocket messages.
 - Demo enhancements, including migration to prompt_toolkit 3.x and fixes to markdown and code formatting issues.
@@ -39,20 +103,33 @@ There are no breaking changes in this release.
 
 ### 1.3.1 Categorized List of Pull Requests
 
+- **Security and Performance Improvements**
+  - :zap: Skip upgrade check for status checks [\#3761](https://github.com/openwallet-foundation/acapy/pull/3761) [ff137](https://github.com/ff137)
+  - Remove  header from http/ws responses [\#3753](https://github.com/openwallet-foundation/acapy/pull/3753) [jamshale](https://github.com/jamshale)
 - **Logging and Observability Improvements**
   - Add websocket outbound debug log [#3736](https://github.com/openwallet-foundation/acapy/pull/3736) [jamshale](https://github.com/jamshale)
   - :loud_sound: Improve logging in Handlers [#3722](https://github.com/openwallet-foundation/acapy/pull/3722) [ff137](https://github.com/ff137)
   - :loud_sound: Improve logging related to public DIDs and routing keys [#3719](https://github.com/openwallet-foundation/acapy/pull/3719) [ff137](https://github.com/ff137)
 - **VC-Related Bug Fixes and Behavior Corrections**
+  - :bug: Improve efficiency of revoking credentials [#3795](https://github.com/openwallet-foundation/acapy/pull/3795) [ff137](https://github.com/ff137)
+  - Put cred_rev_id read, increment and write in a transaction [#3793](https://github.com/openwallet-foundation/acapy/pull/3793) [jamshale](https://github.com/jamshale)
   - :art: Add missing anoncreds field to V20CredExRecordDetail model [#3710](https://github.com/openwallet-foundation/acapy/pull/3710) [ff137](https://github.com/ff137)
   - :bug: Fix v2 cred ex and pres ex webhook events to emit after db write [#3699](https://github.com/openwallet-foundation/acapy/pull/3699) [ff137](https://github.com/ff137)
+- **DID Method Updates**
+  - Add multi key id binding (supersedes #3472) [#3762](https://github.com/openwallet-foundation/acapy/pull/3762) [PatStLouis](https://github.com/PatStLouis)
+  - chore: Remove `did:indy` Stub [\#3764](https://github.com/openwallet-foundation/acapy/pull/3764) [TheTechmage](https://github.com/TheTechmage)
+  - Update webvh package version [\#3763](https://github.com/openwallet-foundation/acapy/pull/3763) [PatStLouis](https://github.com/PatStLouis)
 - **Test and CI Improvements**
+  - :test_tube: Skip tests with jsonld url resolution failures [#3798](https://github.com/openwallet-foundation/acapy/pull/3798) [ff137](https://github.com/ff137)
+  - Disable lts-recreate workflow for main branch [#3773](https://github.com/openwallet-foundation/acapy/pull/3773) [jamshale](https://github.com/jamshale)
   - TestDeleteTails testcase fixes and indexError fix [#3727](https://github.com/openwallet-foundation/acapy/pull/3727) [ann-aot](https://github.com/ann-aot)
   - Regress test to check #2818 issue [#3721](https://github.com/openwallet-foundation/acapy/pull/3721) [andrepestana-aot](https://github.com/andrepestana-aot)
 - **Dependency and Environment Updates**
+  - :art: Code cleanup and :arrow_up: lock file update [\#3808](https://github.com/openwallet-foundation/acapy/pull/3808) [ff137](https://github.com/ff137)
   - Remove unnecessary hash pinning [#3744](https://github.com/openwallet-foundation/acapy/pull/3744) [jamshale](https://github.com/jamshale)
   - :arrow_up: Update lock file [#3720](https://github.com/openwallet-foundation/acapy/pull/3720) [ff137](https://github.com/ff137)
 - **Demo and Example Improvements**
+  - alice/faber demo supports Microsoft dev tunnels [\#3755](https://github.com/openwallet-foundation/acapy/pull/3755) [davidchaiken](https://github.com/davidchaiken)
   - Demo: Change mediation connection to out-of-band [#3751](https://github.com/openwallet-foundation/acapy/pull/3751) [jamshale](https://github.com/jamshale)
   - Feat(demo): migrate to prompt_toolkit 3.x (Fixes #3681) [#3713](https://github.com/openwallet-foundation/acapy/pull/3713) [andrepestana-aot](https://github.com/andrepestana-aot)
 - **Documentation, Governance, and Link Updates**
@@ -63,12 +140,16 @@ There are no breaking changes in this release.
   - Cleanup markdown errors in docs/demo/readme [#3734](https://github.com/openwallet-foundation/acapy/pull/3734) [swcurran](https://github.com/swcurran)
   - :art: Fix codeblock typing in DIDResolution.md [#3730](https://github.com/openwallet-foundation/acapy/pull/3730) [ff137](https://github.com/ff137)
 - **Versioning and Release Support**
+  - Repair lts workflow [\#3759](https://github.com/openwallet-foundation/acapy/pull/3759) [jamshale](https://github.com/jamshale)
   - Tag and Recreate ACA-Py LTS Release [#3735](https://github.com/openwallet-foundation/acapy/pull/3735) [pradeepp88](https://github.com/pradeepp88)
   - Update images and tags to version 1.3.0 [#3708](https://github.com/openwallet-foundation/acapy/pull/3708) [jamshale](https://github.com/jamshale)
 - **Dependabot PRs**
-  - [Link to list of Dependabot PRs in this release](https://github.com/openwallet-foundation/acapy/pulls?q=is%3Apr+is%3Amerged+merged%3A2025-05-01..2025-05-30+author%3Aapp%2Fdependabot+)
+  - [Link to list of Dependabot PRs in this release](https://github.com/openwallet-foundation/acapy/pulls?q=is%3Apr+is%3Amerged+merged%3A2025-05-01..2025-07-02+author%3Aapp%2Fdependabot+)
 - **Release management pull requests**:
-  - 1.3.0rc0 [\#3752](https://github.com/openwallet-foundation/acapy/pull/3752) [swcurran](https://github.com/swcurran)
+  - 1.3.1 [\#3809](https://github.com/openwallet-foundation/acapy/pull/3809) [swcurran](https://github.com/swcurran)
+  - 1.3.1rc2 [\#3800](https://github.com/openwallet-foundation/acapy/pull/3800) [swcurran](https://github.com/swcurran)
+  - 1.3.1rc1 [\#3765](https://github.com/openwallet-foundation/acapy/pull/3765) [swcurran](https://github.com/swcurran)
+  - 1.3.1rc0 [\#3752](https://github.com/openwallet-foundation/acapy/pull/3752) [swcurran](https://github.com/swcurran)
 
 ## 1.3.0
 
